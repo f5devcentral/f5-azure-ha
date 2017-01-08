@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # f5-azure-ha - F5 High Availability in Microsoft Azure
-# https://github.com/ArtiomL/f5-azure-ha
+# https://github.com/f5devcentral/f5-azure-ha
 # Artiom Lichtenstein
 # v1.0.2, 01/10/2016
 
@@ -326,7 +326,7 @@ def funFailover():
 def funArgParser():
 	objArgParser = argparse.ArgumentParser(
 		description = 'F5 High Availability in Microsoft Azure',
-		epilog = 'https://github.com/ArtiomL/f5-azure-ha')
+		epilog = 'https://github.com/f5devcentral/f5-azure-ha')
 	objArgParser.add_argument('-a', help ='test Azure RM authentication and exit', action = 'store_true', dest = 'auth')
 	objArgParser.add_argument('-b', help ='Azure LB name (first LB is used if omitted)', dest = 'lbaz')
 	objArgParser.add_argument('-c', help ='config file location', dest = 'cfile')
