@@ -1,8 +1,8 @@
 # <img align="center" src="img/azure.png" height="70">&nbsp;&nbsp;F5 High Availability in Microsoft Azure
-[![Releases](https://img.shields.io/github/release/ArtiomL/f5-azure-ha.svg)](https://github.com/ArtiomL/f5-azure-ha/releases)
-[![Commits](https://img.shields.io/github/commits-since/ArtiomL/f5-azure-ha/v1.0.2.svg?label=commits%20since)](https://github.com/ArtiomL/f5-azure-ha/commits/master)
-[![Maintenance](https://img.shields.io/maintenance/yes/2017.svg)](https://github.com/ArtiomL/f5-azure-ha/graphs/code-frequency)
-[![Issues](https://img.shields.io/github/issues/ArtiomL/f5-azure-ha.svg)](https://github.com/ArtiomL/f5-azure-ha/issues)
+[![Releases](https://img.shields.io/github/release/f5devcentral/f5-azure-ha.svg)](https://github.com/f5devcentral/f5-azure-ha/releases)
+[![Commits](https://img.shields.io/github/commits-since/f5devcentral/f5-azure-ha/v1.0.2.svg?label=commits%20since)](https://github.com/f5devcentral/f5-azure-ha/commits/master)
+[![Maintenance](https://img.shields.io/maintenance/yes/2017.svg)](https://github.com/f5devcentral/f5-azure-ha/graphs/code-frequency)
+[![Issues](https://img.shields.io/github/issues/f5devcentral/f5-azure-ha.svg)](https://github.com/f5devcentral/f5-azure-ha/issues)
 ![TMOS](https://img.shields.io/badge/tmos-12.1-ff0000.svg)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
@@ -70,7 +70,7 @@ Notes:
 - Using Route Tables (to route outbound traffic via BIG-IPs) is **optional**
 - Updating (multiple) Route Tables (**in addition** to LBAZ) during a single failover event is supported (`-r`)
 - Updating (multiple) Route Tables _only_ (**no** LBAZ) is also supported (`-u` for UDR-only failover)
-- Use [this](https://github.com/ArtiomL/f5networks/blob/master/azure/lbaz_mpips.ps1) script if you need help setting up LB rules with multiple public IPs
+- Use [this](https://github.com/f5devcentral/f5networks/blob/master/azure/lbaz_mpips.ps1) script if you need help setting up LB rules with multiple public IPs
 
 <br>
 ## Installation
@@ -188,7 +188,7 @@ class clsAREA(object):
 
 This is the actual HA / failover logic.
 
-The file can be used as an [external monitor](https://devcentral.f5.com/articles/ltm-external-monitors-the-basics), but this is not recommended, since currently the Azure RM API takes up to [3 minutes](https://github.com/ArtiomL/f5-azure-ha/issues/7) to successfully complete PUT transactions.
+The file can be used as an [external monitor](https://devcentral.f5.com/articles/ltm-external-monitors-the-basics), but this is not recommended, since currently the Azure RM API takes up to [3 minutes](https://github.com/f5devcentral/f5-azure-ha/issues/7) to successfully complete PUT transactions.
 
 Instead, use [SOL14397](https://support.f5.com/kb/en-us/solutions/public/14000/300/sol14397.html) to run this program based on a `monitor status down` mcpd syslog message. These messages should not be [ throttled](https://support.f5.com/kb/en-us/solutions/public/11000/900/sol11934.html).
 
@@ -281,5 +281,5 @@ optional arguments:
   -u                UDR mode failover (-r is required)
   -v                show program's version number and exit
 
-https://github.com/ArtiomL/f5-azure-ha
+https://github.com/f5devcentral/f5-azure-ha
 ```
