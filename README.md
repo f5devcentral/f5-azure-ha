@@ -70,7 +70,7 @@ Notes:
 - Using Route Tables (to route outbound traffic via BIG-IPs) is **optional**
 - Updating (multiple) Route Tables (**in addition** to LBAZ) during a single failover event is supported (`-r`)
 - Updating (multiple) Route Tables _only_ (**no** LBAZ) is also supported (`-u` for UDR-only failover)
-- Use [this](https://github.com/f5devcentral/f5networks/blob/master/azure/lbaz_mpips.ps1) script if you need help setting up LB rules with multiple public IPs
+- Use [this](https://github.com/ArtiomL/f5networks/blob/master/azure/lbaz_mpips.ps1) script if you need help setting up LB rules with multiple public IPs
 
 <br>
 ## Installation
